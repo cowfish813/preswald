@@ -8,7 +8,7 @@ entrypoint = "hello.py"
 [branding]
 name = "Preswald Project"
 logo = "images/favicon-32x32.png"
-favicon = "images/favicon.ico"
+favicon = "images/favicon1.ico"
 primaryColor = "#000000"
 
 [data.AirQuality_csv]
