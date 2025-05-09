@@ -1,0 +1,20 @@
+[project]
+title = "Preswald Project"
+version = "0.1.0"
+port = 8501
+slug = "my-project-668716"  
+entrypoint = "hello.py"    
+
+[branding]
+name = "Preswald Project"
+logo = "images/favicon-32x32.png"
+favicon = "images/favicon.ico"
+primaryColor = "#000000"
+
+[data.AirQuality_csv]
+type = "csv"
+path = "data/Air_Quality.csv"
+
+[logging]
+level = "INFO"  
+format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
