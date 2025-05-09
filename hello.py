@@ -2,7 +2,6 @@ from preswald import text, plotly, connect, get_df, table, query
 import pandas as pd
 import plotly.express as px
 
-# text("# Welcome to Preswald!")
 text("New York Air Quality 🎉")
 
 # Load the CSV
@@ -15,15 +14,12 @@ sql = 'SELECT Start_Date, CAST("Data Value" AS INTEGER) AS "Data Value","Geo Pla
 'ORDER BY Start_Date ASC'
 
 try:
-    # update_df = query(update_sql, "AirQuality_csv")
     filtered_df = query(sql, "AirQuality_csv")
-    # results = query("SELECT * FROM events", 'eq_clickhouse')
 except ValueError as e:
     print(f"Configuration error: {e}")
 except Exception as e:
     print(f"Query error: {e}")
 
-# print(filtered_df, "date?")
 # Create a scatter plot
 fig = px.line(
         filtered_df,
@@ -38,12 +34,6 @@ fig = px.line(
         color="Geo Place Name",
         markers=True
     )
-
-# Add labels for each point
-# fig.update_traces(textposition='top center', marker=dict(size=12, color='lightblue'))
-
-# Style the plot
-# fig.update_layout(template='plotly_white')
 
 # Show the plot
 plotly(fig)
